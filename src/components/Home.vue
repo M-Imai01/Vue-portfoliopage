@@ -1,5 +1,5 @@
 <template>
-  <section class="text-gray-600 body-font p-4">
+  <section class="text-neutral-900 body-font p-4">
     <div
       class="container px-5 mx-auto bg-white rounded-xl md:my-16 p-4 w-5/6 shadow"
     >
@@ -7,18 +7,19 @@
         <img
           src="../images/profileimage.jpg"
           class="object-covere w-40 rounded-full h-auto shrink"
+          id="profile_photo"
         />
         <div class="sm:text-left mt-6 sm:mt-0 shrink" id="profile-text">
-          <small class="text-[min(1.2vw,14px)]">Imai Mitsuaki</small>
-          <h2 class="text-gray-900 text-[min(2vw,24px)] font-medium mb-2">
+          <small class="text-[min(2.1vw,14px)]">Imai Mitsuaki</small>
+          <h2 class="text-neutral-950 text-[min(3.1vw,24px)] font-medium mb-2">
             今井 光明
           </h2>
-          <p class="pb-4 text-[min(1.5vw,18px)]">
+          <p class="pb-4 text-[min(2.7vw,18px)]">
             家電量販店の販売員→手芸キットメーカーのECサイト運用担当→Webデザインの職業訓練を受講。<br />現在はメディアサイト運営会社でWEBデザイナー兼フロントエンドコーダー職として従事しています。
           </p>
-          <p class="pb-4 text-[min(1.5vw,18px)]">
+          <p class="pb-4 text-[min(2.7vw,18px)]">
             Webアプリケーション作成の自己学習と並行して、<span
-              class="text-orange-500 font-extrabold"
+              class="text-orange-600 font-extrabold"
               >AWS SAA</span
             >の資格取得を目指し学習中です。
           </p>
@@ -28,7 +29,7 @@
       <div
         class="flex flex-col bg-neutral-100 border shadow-sm rounded-xl dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7] items-center"
       >
-        <h2 class="py-4 text-[min(3.5vw,30px)] font-bold">保有資格</h2>
+        <h2 class="py-4 text-[min(3.6vw,30px)] font-bold">保有資格</h2>
         <img
           class="h-auto rounded-t-xl w-40"
           src="../images/aws-certified-cloud-practitioner.png"
@@ -36,13 +37,11 @@
         />
         <div class="p-4 md:p-5">
           <h3
-            class="text-[min(2vw,18px)] font-bold text-gray-800 dark:text-white text-center"
+            class="text-[min(2.7vw,18px)] font-bold text-gray-800 dark:text-white text-center"
           >
             AWS Certified Cloud Practitioner
           </h3>
-          <p
-            class="mt-5 text-[min(1.2vw,12px)] text-gray-500 dark:text-gray-500"
-          >
+          <p class="mt-3 text-[min(2vw,12px)] text-gray-700 dark:text-gray-500">
             取得日:2023/04/15
           </p>
         </div>
@@ -812,5 +811,11 @@ export default {};
 <style scoped>
 #profile-text {
   width: 50vw;
+}
+
+#profile_photo {
+  @media screen and (max-width: 640px) {
+    width: 8rem;
+  }
 }
 </style>

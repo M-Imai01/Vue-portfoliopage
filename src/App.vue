@@ -10,6 +10,13 @@ onMounted(() => {
     window.HSStaticMethods.autoInit();
   }, 100);
 });
+
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient(
+  "https://stjrdkcflnnbqkbuqtdf.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0anJka2NmbG5uYnFrYnVxdGRmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDg1ODg1MzEsImV4cCI6MjAyNDE2NDUzMX0.bN_nKuMo7ABu3lwo5aFc1fm1ovublQx7-bOPaCda9iY"
+);
 </script>
 
 <template>
