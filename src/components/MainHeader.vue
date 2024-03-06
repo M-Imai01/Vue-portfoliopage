@@ -50,6 +50,7 @@ export default {
 <template>
   <header
     class="flex flex-wrap sm:justify-start sm:flex-nowrap w-full bg-emerald-500 text-sm py-3 sm:py-0 sticky top-0 z-40"
+    id="top"
   >
     <nav
       class="relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"

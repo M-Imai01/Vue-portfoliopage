@@ -1,35 +1,45 @@
 <template>
   <div class="container-box">
     <h1 class="text-center text-2xl m-4">お問い合わせ</h1>
-    <form ref="form" @submit.prevent="sendEmail" class="pt-5 mx-auto">
+    <form @submit.prevent="sendEmail" class="pt-5 mx-auto">
       <div class="row mx-auto w-3/5">
         <div class="col-8 form-group mx-auto">
           <input
             type="text"
-            class="form-control w-1/2"
+            id="name"
+            name="name"
+            class="form-control w-2/3 shadow rounded"
             placeholder="お名前/会社名"
             v-model="name"
+            required
           />
         </div>
         <div class="col-8 form-group pt-3 mx-auto">
           <input
-            type="text"
-            class="form-control w-1/2"
+            type="email"
+            id="email"
+            name="email"
+            class="form-control w-2/3 shadow rounded"
             placeholder="メールアドレス"
             v-model="email"
+            required
           />
         </div>
         <div class="col-8 form-group pt-3 mx-auto">
           <input
             type="text"
-            class="form-control w-1/2"
+            id="subject"
+            name="subject"
+            class="form-control w-2/3 shadow rounded"
             placeholder="件名"
             v-model="subject"
           />
         </div>
         <div class="col-8 form-group pt-3 mx-auto">
           <textarea
-            class="form-control"
+            id="message"
+            name="message"
+            class="form-control shadow-sm"
             cols="30"
             rows="8"
             placeholder="内容"
@@ -52,7 +62,6 @@
 </template>
 
 <script>
-// import emailjs from 'emailjs-com';
 import emailjs from "@emailjs/browser";
 
 export default {
@@ -62,32 +71,33 @@ export default {
       email: "",
       subject: "",
       message: "",
+      serviceId: "service_qknof5u",
+      templateId: "template_kx5c3bb",
+      publicKey: "TTl9a_GUU1qyeOTL-",
     };
   },
   methods: {
     sendEmail() {
-      const params = {
-        name: this.name,
-        email: this.email,
-        subject: this.subject,
+      if (!this.email) {
+        console.log("メールアドレスを入力してください。");
+        return;
+      }
+
+      const formData = {
+        user_name: this.name,
+        user_email: this.email,
+        user_subject: this.subject,
         message: this.message,
       };
 
       emailjs
-        .send(
-          "service_qknof5u",
-          "template_kx5c3bb",
-          params,
-          "hDwFp1OefzmNvq2pV"
-        )
+        .send(this.serviceId, this.templateId, formData, this.publicKey)
         .then(
-          (result) => {
-            console.log("SUCCESS!", result.text);
-            alert("送信しました！");
+          () => {
+            console.log("SUCCESS!");
           },
           (error) => {
             console.log("FAILED...", error.text);
-            alert("送信に失敗しました...メールアドレスをご確認ください");
           }
         );
 
