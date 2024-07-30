@@ -167,6 +167,19 @@ export default {
       images: [
         // Dev Tab
         {
+          url: "https://stjrdkcflnnbqkbuqtdf.supabase.co/storage/v1/object/sign/Portfolio-Image/Develop07.webp?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJQb3J0Zm9saW8tSW1hZ2UvRGV2ZWxvcDA3LndlYnAiLCJpYXQiOjE3MjIzMDQ1NTEsImV4cCI6MTc1Mzg0MDU1MX0.jTCXSCjeIe0IYgyFv73n6aKgKSD3FB6lZKRQ4cvZhFI&t=2024-07-30T01%3A55%3A47.205Z",
+          tab: "Dev",
+          title: "機種依存文字チェッカー",
+          description:
+            "【概要】<br>実務でWeb制作を行なっている中でチームメンバーから、原稿内の機種依存文字による文字化けが問題として挙がったため、機種依存文字チェッカーを作りました。<br>Firebaseでデプロイしたため手早くチーム内に公開できました。",
+          siteLink: "https://textchecker-b8662.firebaseapp.com/",
+          labels: [
+            { text: "HTML", color: "red" },
+            { text: "Firebase", color: "amber" },
+            { text: "実務", color: "red" },
+          ],
+        },
+        {
           url: "https://stjrdkcflnnbqkbuqtdf.supabase.co/storage/v1/object/sign/Portfolio-Image/Develop06.gif?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJQb3J0Zm9saW8tSW1hZ2UvRGV2ZWxvcDA2LmdpZiIsImlhdCI6MTcwOTY4NDgxMiwiZXhwIjoxNzQxMjIwODEyfQ.sUrDSw8UHzIemom7L-XXBc6k-Gq_nU1FqLO7xJIzKCQ&t=2024-03-06T00%3A26%3A52.880Z",
           tab: "Dev",
           title: "React + Material UI TodoListアプリ",
@@ -252,12 +265,24 @@ export default {
         },
         // Design Tab
         {
+          url: "https://stjrdkcflnnbqkbuqtdf.supabase.co/storage/v1/object/sign/Portfolio-Image/Design11.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJQb3J0Zm9saW8tSW1hZ2UvRGVzaWduMTEucG5nIiwiaWF0IjoxNzIyMzAwMjA3LCJleHAiOjE3NTM4MzYyMDd9.vwtHa6uL9_SdDSP9uhv6HhjdVxw-vXzW-Z2st2E9h0U&t=2024-07-30T00%3A43%3A22.462Z",
+          tab: "Design",
+          title: "【通常業務例】WordPress記事コーディング②",
+          description:
+            "【概要】<br>自社で運用しているサイトの一つで、コンテンツまとめページを作成しました。<br>バナー画像以下の各コンテンツ部分のレスポンシブ時の挙動に気を使いました。",
+          siteLink:
+            "https://www.dentwave.com/coe/coe_festa_catchup_webinars_list-coe/",
+          labels: [
+            { text: "実務", color: "red" },
+            { text: "WordPress", color: "cyan" },
+          ],
+        },
+        {
           url: "https://stjrdkcflnnbqkbuqtdf.supabase.co/storage/v1/object/sign/Portfolio-Image/Design10.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJQb3J0Zm9saW8tSW1hZ2UvRGVzaWduMTAucG5nIiwiaWF0IjoxNzA5Njg0Nzc3LCJleHAiOjE3NDEyMjA3Nzd9.Mc7e0MJL5LE4XFB--V3f2IM4RxZDibPZ78EwBJv-vhI&t=2024-03-06T00%3A26%3A18.106Z",
           tab: "Design",
-          title: "【通常業務例】バナー画像制作 + WordPress記事コーディング",
+          title: "【通常業務例】バナー画像制作 + WordPress記事コーディング①",
           description:
             "【概要】<br>現職ではWordPressで構築されたオウンドメディアでの記事作成業務を行なっています。<br>バナー画像はillustratorで作成しております。WordPressの記事は雛形が既にあるため、基本的にはそちらに沿って記事を作成していきますが、随時必要に応じてマークアップやcssの記述を追加しております。",
-          siteLink: "https://www.dentwave.com/news/axa_20230804_webinar/",
           labels: [
             { text: "実務", color: "red" },
             { text: "illustrator", color: "amber" },
